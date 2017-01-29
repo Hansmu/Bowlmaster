@@ -1,0 +1,7 @@
+Directional light location does not matter, just its degree.
+Try and relate the scale to things in real life.
+The sizes have been chosen based on the standards for bowling fields. One unit is a cm.
+Create new material: Assets -> Create -> Material
+Select Main Camera, then GameObject -> Align With Camera to align the camera with your current view.
+Need to enable Convex on Mesh Collider to enable collision between other Mesh Colliders.
+Camera Far point refers to how far away the camera can see.
