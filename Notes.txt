@@ -5,3 +5,5 @@ Create new material: Assets -> Create -> Material
 Select Main Camera, then GameObject -> Align With Camera to align the camera with your current view.
 Need to enable Convex on Mesh Collider to enable collision between other Mesh Colliders.
 Camera Far point refers to how far away the camera can see.
+
+Isometric's useful for size comparison. For visual reality use perspective.
