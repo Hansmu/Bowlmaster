@@ -7,3 +7,10 @@ Need to enable Convex on Mesh Collider to enable collision between other Mesh Co
 Camera Far point refers to how far away the camera can see.
 
 Isometric's useful for size comparison. For visual reality use perspective.
+
+Rigidbody is required to add mass and other physics based properties to a component.
+To change gravity go under Edit -> Project Settings -> Physics. We've chosen 1 unit to be 1 cm in our game. So the difference is 100x. Have to
+modify the gravitiy to match it so from 9.81 it goes to 981.
+
+Convex mesh is a mesh that is curved, bulging outwards not inwards. Mesh colliders must be convex to self-collide e.g. pin with pin. Maximum triangles
+in collider is 255. This is due to performance limitations of Unity.
