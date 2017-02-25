@@ -14,3 +14,6 @@ modify the gravitiy to match it so from 9.81 it goes to 981.
 
 Convex mesh is a mesh that is curved, bulging outwards not inwards. Mesh colliders must be convex to self-collide e.g. pin with pin. Maximum triangles
 in collider is 255. This is due to performance limitations of Unity.
+
+Render texture is to render a camera into a texture instead of directly into your view, becoming the main camera.
+Screen Space - Camera makes an element stay with the camera.
