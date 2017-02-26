@@ -4,6 +4,7 @@ using System.Collections;
 public class Ball : MonoBehaviour {
 	private Rigidbody rigidBody;
 	private AudioSource audioSource;
+	private bool isInPlay = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,10 +18,18 @@ public class Ball : MonoBehaviour {
 	}
 
 	public void LaunchBall(Vector3 launchVelocity) {
-		audioSource = GetComponent<AudioSource>();
-		audioSource.Play();
+		if(!isInPlay) {
+			audioSource = GetComponent<AudioSource>();
+			audioSource.Play();
 
-		rigidBody.useGravity = true;
-		rigidBody.velocity = launchVelocity;
+			rigidBody.useGravity = true;
+			rigidBody.velocity = launchVelocity;
+
+			isInPlay = true;
+		}
+	}
+
+	public bool IsInPlay() {
+		return isInPlay;
 	}
 }

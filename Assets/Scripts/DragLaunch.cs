@@ -17,6 +17,12 @@ public class DragLaunch : MonoBehaviour {
 		startTime = Time.time;
 	}
 
+	public void MoveStartPosition(float xMove) {
+		if(!ball.IsInPlay()) {
+			ball.transform.Translate(new Vector3(xMove, 0, 0));
+		}
+	}
+
 	public void DragEnd() {
 		float endTime = Time.time;
 		Vector3 dragEnd = Input.mousePosition;
