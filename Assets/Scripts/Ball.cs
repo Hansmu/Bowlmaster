@@ -2,17 +2,13 @@
 using System.Collections;
 
 public class Ball : MonoBehaviour {
-	public Vector3 launchVelocity;
-
 	private Rigidbody rigidBody;
 	private AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody>();
-		rigidBody.velocity = launchVelocity;
-	
-		LaunchBall();
+		rigidBody.useGravity = false;
 	}
 	
 	// Update is called once per frame
@@ -20,8 +16,11 @@ public class Ball : MonoBehaviour {
 		
 	}
 
-	public void LaunchBall() {
+	public void LaunchBall(Vector3 launchVelocity) {
 		audioSource = GetComponent<AudioSource>();
 		audioSource.Play();
+
+		rigidBody.useGravity = true;
+		rigidBody.velocity = launchVelocity;
 	}
 }
